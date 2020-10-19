@@ -82,12 +82,13 @@ class sbbst():
             node.right = self.deleteNode(node.right, key)
 
         else: # key == node.val
-            self.N -= 1
             if node.left is None:
+                self.N -= 1
                 temp = node.right
                 node = None
                 return temp
             elif node.right is None:
+                self.N -= 1
                 temp = node.left
                 node = None
                 return temp
